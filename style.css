@@ -93,7 +93,8 @@ body {
 .info h2,
 .story h2,
 .gallery h2,
-.rsvp h2 {
+.rsvp h2,
+.gifts h2 {
     color: var(--pink);
     font-family: 'Sacramento', cursive;
     font-size: 5rem;
@@ -182,13 +183,15 @@ body {
 
 .story,
 .gallery,
-.rsvp {
+.rsvp,
+.gifts {
     padding-top: 10rem;
     padding-bottom: 8rem;
 }
 
 .story span,
-.gallery span {
+.gallery span,
+.gifts span {
     display: block;
     text-transform: uppercase;
     color: #666;
@@ -199,7 +202,8 @@ body {
 
 .story p,
 .gallery p,
-.rsvp p {
+.rsvp p,
+.gifts p {
     font-size: 1rem;
     font-weight: 300;
 }
@@ -342,6 +346,57 @@ body {
     color: var(--pink);
     border: 1px solid white;
 }
+
+footer {
+    padding: 3rem;
+    background-color: var(--pink);
+    color: white;
+}
+
+footer a {
+    color: var(--bg);
+    font-weight: bold;
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: white;
+}
+
+footer li {
+    list-style: none;
+    display: inline;
+    margin: 0.5rem;
+}
+
+.audio-icon-wrapper {
+    width: 4rem;
+    height: 4rem;
+    font-size: 4rem;
+    position: fixed;
+    bottom: 2.5rem;
+    right: 2rem;
+    cursor: pointer;
+    color: white;
+    opacity: 0.5;
+    mix-blend-mode: difference;
+    animation: rotating 4s  linear infinite;
+    /* buat poros putaran ditengah biar muternya tidak aneh */
+    transform-origin: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    line-height: 0;
+}
+
+@keyframes rotating {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
 /* Media Queries */
 
 /* Extra Large */
@@ -364,7 +419,7 @@ body {
     .home .heart {
         display: none;
     }
-
+    
     .timeline::before {
         left: 60px;
     }
